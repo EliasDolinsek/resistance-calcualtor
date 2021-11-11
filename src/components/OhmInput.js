@@ -1,7 +1,7 @@
 function OhmInput(props){
     return <div>
-        <span>{props.title}</span>
-        <input type="number" onChange={props.handleChange}/>
+        <span className="me-2">{props.title}</span>
+        <input  className="me-2" type="number" onChange={(value) => props.handleChange(value.target.value)}/>
         <span>Ohm</span>
     </div>
 }

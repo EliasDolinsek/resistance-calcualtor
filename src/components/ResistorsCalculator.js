@@ -1,7 +1,9 @@
 import {Table} from "react-bootstrap";
 
 function ResistorsCalculator(props) {
-    return <div>Wait</div>
+    if(props.result == null) return <div>
+
+    </div>
     return <Table striped bordered hover>
         <thead>
         <tr>
@@ -10,10 +12,10 @@ function ResistorsCalculator(props) {
         </tr>
         </thead>
         <tbody>
-        {props.result.keys().map((key) => {
+        {Object.keys(props.result).map((key) => {
             return <tr>
                 <td>{key}</td>
-                <td>{props.result[key]}</td>
+                <td>{props.result[key].toFixed(5)}</td>
             </tr>;
         })}
         </tbody>
